@@ -1,5 +1,7 @@
 # Image Comparison Slider
 
+![](demo.gif)
+
 Compare two images using a horizontal or vertical slider.
 
 How to use?
