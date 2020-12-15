@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import luanRbg from './assets/luan_brazil_rgb.jpg';
+import luanBw from './assets/luan_brazil_bw.jpg';
+import errors_prev from './assets/7errors_prev.jpg';
+import errors_next from './assets/7errors_next.jpg';
+
+import { ImageComparisonSlider } from './components/ImageComparisonSlider';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <>
+        <ImageComparisonSlider
+            beforeImage={luanBw}
+            afterImage={luanRbg}
+            direction="horizontal"
+        />
+        <br />
+        <ImageComparisonSlider
+            beforeImage={errors_prev}
+            afterImage={errors_next}
+            width={400}
+            height={536}
+            direction="vertical"
+        />
+    </>,
+    document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
